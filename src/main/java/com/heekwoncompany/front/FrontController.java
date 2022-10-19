@@ -8,7 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 import com.heekwoncompany.member.MDeleteCommand;
+import com.heekwoncompany.member.MIdCheckCommand;
 import com.heekwoncompany.member.MJoinCommand;
 import com.heekwoncompany.member.MLoginCommand;
 
@@ -93,7 +95,17 @@ public class FrontController extends HttpServlet {
 			command1.execute(request, response);
 			
 		}
-		
+		else if(command.equals("/idCheck.do")) {
+			System.out.println("idCheck.do 요청왔음!");
+			
+			MIdCheckCommand command1 = new MIdCheckCommand();
+			command1.execute(request, response);
+			
+		}
+		else if(command.equals("/logout.do")) {
+			System.out.println("logout.do 요청왔음!");
+										
+		}
 	}
 	
 }

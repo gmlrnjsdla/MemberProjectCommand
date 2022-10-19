@@ -20,7 +20,7 @@
 			String id = (String)session.getAttribute("memberId");
 			out.println(id+"님 로그인 중<br><br>");
 	%>
-			<a href="logout.jsp">로그아웃</a>
+			<a href="logout.do">로그아웃</a>
 			<br><br>
 			<a href="modify.jsp">회원 정보 수정</a>
 			<br><br>
